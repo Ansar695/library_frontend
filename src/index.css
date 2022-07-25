@@ -1,13 +1,187 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: calibri;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* HEADER SECTION STYLING */
+.header{
+  width: 100%;
+  height: 45px;
+  background-color: rgb(39, 38, 38);
+  line-height: 45px;
+  padding: 0rem 1rem;
+}
+.header p{
+  color: white;
+  font-size: 18px;
+}
+
+
+/* BOOK LIST SECTION STYLING */
+.booksList{
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+.booksList h1{
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.booksList .navlink{
+  text-decoration: none;
+}
+.booksList .navlink button{
+  padding: .4rem 1rem;
+  background-color: brown;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.booksList .table{
+  width: 100%;
+  height: auto;
+}
+.booksList .table table{
+  width: 100%;
+  height: auto;
+  text-align: left;
+  border-collapse: collapse;
+}
+.booksList .table table th,td{
+  border: 1px solid rgb(207, 208, 209);
+  padding: .7rem;
+}
+.booksList .table table thead tr{
+  border-bottom: 2px solid rgb(207, 208, 209);
+}
+.booksList .table table thead tr th{
+  color: black;
+  background-color: white;
+}
+.booksList .table table tr:nth-child(2n+1){
+  background-color: rgb(231, 233, 241);
+}
+.booksList .table table tbody tr:hover{
+  background-color: rgb(231, 233, 241);
+}
+.booksList .table table tbody tr td button{
+  background-color: rgb(72, 123, 190);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 0rem;
+  padding: .3rem .8rem;
+}
+.booksList .table table tbody tr td .btn2{
+  background-color: rgb(223, 47, 47);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 0rem;
+  padding: .3rem .8rem;
+  margin-left: .4rem;
+}
+.booksList .table table tbody tr td .btn3{
+  background-color: rgb(51, 147, 51);
+  margin-left: .4rem;
+}
+
+
+
+
+/* ADD BOOK SECTION STYLING */
+.add_books{
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+.add_books h1{
+  width: 80%;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.add_books form{
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+.add_books form .form_input{
+  width: 100%;
+  height: auto;
+  padding: .6rem 0rem;
+  display: flex;
+  flex-direction: column;
+}
+.add_books form .form_input input{
+  margin-top: .2rem;
+  height: 27px;
+}
+.add_books form button{
+  padding: .4rem 1.2rem;
+  background-color: brown;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+
+/* BOOK DETAILS SECTION STYLING */
+.details_main{
+  width: 100%;
+  height: calc(100vh - 45px);
+  padding: 1rem;
+}
+.details_main .card_wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.details_main .card_wrapper .left{
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+  border: .1px solid gray;
+  padding: 2rem 4rem;
+}
+.details_main .card_wrapper .left img{
+  width: 100%;
+  height: 100%;
+}
+.details_main .card_wrapper .right{
+  width: 52%;
+  height: 100%;
+  padding: 2rem;
+}
+.details_main .card_wrapper .right .details h2{
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.details_main .card_wrapper .right .details p{
+  margin-bottom: 1rem;
+}
+.details_main .card_wrapper .right .details{
+  margin-bottom: 1rem;
+}
+.details_main .card_wrapper .right .navlink{
+  text-decoration: none;
+  padding: .4rem 1rem;
+  background-color: brown;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
 }

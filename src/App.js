@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector, useDispatch } from 'react-redux'
+import Header from './Components/Header'
+import {NavLink, Routes, Route} from "react-router-dom"
+import BookList from "./Components/BookList"
+import AddBooks from './Components/AddBooks'
+import BookDetails from "./Components/BookDetails"
+import UpdateBook from './Components/UpdateBook'
 
-function App() {
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Routes>
+        <Route path='/' element={<>
+          <Header />
+          <BookList />
+        </>}/>
+        <Route path='/add-books' element={<>
+          <Header />
+          <AddBooks />
+        </>} />
+        <Route path='/book-details/:id' element={<>
+          <Header />
+          <BookDetails />
+        </>} />
+        <Route path='/update-book/:id' element={<>
+          <Header />
+          <UpdateBook />
+        </>} />
+      </Routes>
+    </> 
+  )
 }
 
-export default App;
+export default App
